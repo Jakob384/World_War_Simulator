@@ -5,26 +5,19 @@ import java.util.Random;
 
 public class ColorSelector {
 	
-	Color hex_color = Color.BLACK;
+	Color hex_color = Color.BLACK;	// Sets the base hex color
 	
-	Random ran = new Random();
+	Random ran = new Random();	// Random instance 
 	
 	public void generateColor(){
-		int color_red = 0,
-			color_green = ran.nextInt(256),
-			color_blue = (color_green - 255) * -1;
+		int color_red = 0,	// Sets the value for the amount of red
+			color_green = ran.nextInt(156) + 100,	// Generates the amount of green from 100 to 255
+			color_blue = 0;	// Sets the amount of blue in the color to be generated
 		
-		if(color_blue <= 230){
-			color_blue = 0;
-			color_green = ran.nextInt(156) + 100;
-		}else{
-			color_blue = ran.nextInt(156) + 100;
-		}
-		
-		hex_color = new Color(color_red, color_green, color_blue);
+		hex_color = new Color(color_red, color_green, color_blue);	// Sets the hex_color to the new color that is generated
 	}
 	
 	public Color getColor(){
-		return hex_color;
+		return hex_color;	// Returns the hex color
 	}
 }

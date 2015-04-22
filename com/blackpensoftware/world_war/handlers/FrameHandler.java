@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 public class FrameHandler{
 	
 	static JFrame main_frame = new JFrame();	// Creates the JFrame
-	public static Color game_panel_color;
+	public static Color game_panel_color;	// creates a public variable of the game panel color
 	
 	public static void generateFrame(int xPos, int yPos, int width, int height, Color color, String frame_title){
 		int main_frame_x_location = xPos; 	// Creates a variable that will be used to set the x location for the frame  
@@ -25,7 +25,7 @@ public class FrameHandler{
 		main_frame.setLocation(main_frame_x_location, main_frame_y_location);	// Sets the location of the JFrame on the screen with the predefined x and y position
 		main_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		// sets the default close operation to close the application on close
 		
-		main_frame.add(new LandHandler());
+		main_frame.add(new LandHandler()); 	// adds the landhandler class to the main frame
 	}// End of main method
 	
 	public static JFrame getFrame(){	// Gets the frame to be used in the other classes
