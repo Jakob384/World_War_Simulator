@@ -18,7 +18,7 @@ public class World_War_MainFrame{
 			frame_width = (int)width, 	// Sets the width of the frame
 			frame_height = (int)height;	// Sets the height of the frame
 		Color frame_color = Color.DARK_GRAY;	// Sets the background color of the frame 
-		String frame_title = "World War Simulator v0.0.4";		// Sets the title of the frame
+		String frame_title = "World War Simulator v0.0.5";		// Sets the title of the frame
 		
 		FrameHandler.generateFrame(frame_x_pos, frame_y_pos, frame_width, frame_height, frame_color, frame_title);	// Creates the frame using the frameHandler class
 	}// End of main method

@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class ColorSelector {
 	
-	Color hex_color = Color.BLACK;	// Sets the base hex color
+	public Color hex_color = Color.BLACK;	// Sets the base hex color
 	
 	Random ran = new Random();	// Random instance 
 	

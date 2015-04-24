@@ -1,4 +1,4 @@
-package com.blackpensoftware.world_war.handlers;
+package com.blackpensoftware.world_war.core;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -10,16 +10,16 @@ public class Hexagon{
 	static double screenwidth = screenSize.getWidth();	// Creates a double with the value of the screen width
 	static double screenheight = screenSize.getHeight();	// Creates a double with the value of the screen height 
 	
-	int size_apothm = 2;	// Sets the apothm size for the hexagons to be generated
+	int size_apothm = 5;	// Sets the apothm size for the hexagons to be generated
 	int diameter = size_apothm * 2;		// Creates and sets the value for the diameter of the hexagons 
 	int side_length = diameter + (size_apothm / 2);	// Creates and sets the value for the side length of the hexagon to be generated
 	int height = diameter * 2;	// Creates and sets the value of the total height of the hexagons
 	int width = (size_apothm * 2) + side_length;	// Calculates the total width of the hexagons 
 	int number_to_gen_width = (int)screenwidth / width;		// Calculates the number of hexagons to be generated in the frame on the x axis
-	int number_to_gen_height = (int)screenheight / height;	// Calculates the number of hexagons to be generated on the y axis
+	int number_to_gen_height = (int)screenheight / height + 20;	// Calculates the number of hexagons to be generated on the y axis
 	
 	int[] xPoints = new int[6];		// Creates an integer array for the x points of the hexagons to be generated
-	int[] yPoints = new int[6];		// Creates an integer array fot the y points of the hexagons to be generated 
+	int[] yPoints = new int[6];		// Creates an integer array for the y points of the hexagons to be generated 
 	
 	int xPos = 0;	// Sets the base x Position 
 	int yPos = 0;	// Sets the base y Position 
@@ -91,5 +91,13 @@ public void fillHex(Graphics g, int xPos, int yPos){
 	
 	public int getHex_yPos(){
 		return yPos;	// Returns the value of yPos
+	}
+	
+	public int getNumberToGenX(){
+		return number_to_gen_width;
+	}
+	
+	public int getNumberToGenY(){
+		return number_to_gen_height;
 	}
 }// End of class
